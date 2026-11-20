@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>REFORGE | Websites that stand out</title>
+<meta name="description" content="REFORGE designs and builds fast, modern websites and smart AI tools that turn visitors into customers.">
+<meta property="og:title" content="REFORGE | Websites that stand out">
+<meta property="og:description" content="Fast, modern websites and smart AI tools for growing businesses. Ideas to impact.">
+<meta property="og:type" content="website">
+<!-- When the site is live, change og:image and og:url to full addresses, e.g. https://yourdomain.com/assets/reforge-social.png -->
+<meta property="og:image" content="assets/reforge-social.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" type="image/svg+xml" href="assets/reforge-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="extras.css">
+<link rel="stylesheet" href="colours.css">
+<script>
+  (function () {
+    var root = document.documentElement;
+    // Theme: the visitor's saved choice, otherwise their device setting.
+    var theme = null;
+    try { theme = localStorage.getItem('rf-theme'); } catch (e) {}
+    if (theme !== 'light' && theme !== 'dark') theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    root.dataset.theme = theme;
+    // Scroll animation is switched on only when the visitor has not asked for reduced motion.
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      root.classList.add('js');
+      // Logo intro: once per visit.
+      try { if (!sessionStorage.getItem('rf-intro')) { root.classList.add('intro-on'); sessionStorage.setItem('rf-intro', '1'); } } catch (e) {}
+      // Safety net: if the animation scripts never start, fall back to the plain static page.
+      window.addEventListener('load', function () {
+        setTimeout(function () { if (!(window.RF && window.RF.engine)) root.classList.remove('js', 'intro-on'); }, 1500);
+      });
+    }
+  })();
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="#forge" aria-label="REFORGE, back to top"><img class="logo-dark" src="assets/reforge-logo-for-dark-bg.svg" alt="REFORGE" width="150" height="29"><img class="logo-light" src="assets/reforge-logo-for-light-bg.svg" alt="REFORGE" width="150" height="29"></a>
+    <nav class="nav-links" id="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-small" href="#contact">Get a quote</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+    </button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span class="sr-only">Menu</span><i></i><i></i><i></i></button>
+  </div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+</header>
+
+<main>
+
+<!-- ============ HERO + FORGE SCENE ============ -->
+<section class="forge" id="forge" aria-label="Introduction">
+  <div class="forge-stage">
+    <canvas class="forge-sparks" aria-hidden="true"></canvas>
+    <div class="container forge-grid">
+      <div class="forge-copy">
+        <p class="eyebrow">Web design &amp; AI studio</p>
+        <h1 aria-label="Websites that stand out.">Websites that <span class="grad swap" aria-hidden="true" data-words="stand out.|win clients.|load fast.|sell.">stand out.</span></h1>
+        <p class="lede">REFORGE designs and builds fast, modern websites and smart AI tools that turn your visitors into customers.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact" data-config="whatsapp" data-set-text="Chat on WhatsApp">Get in touch</a>
+          <a class="btn btn-ghost" href="#work">See my work</a>
+        </div>
+        <ol class="forge-captions" aria-label="How a REFORGE website is made">
+          <li class="forge-caption" data-stage="0"><b>Raw</b> Every site starts as raw material.</li>
+          <li class="forge-caption" data-stage="1"><b>Heat</b> We heat it up.</li>
+          <li class="forge-caption" data-stage="2"><b>Strike</b> Shape it, strike by strike.</li>
+          <li class="forge-caption" data-stage="3"><b>Finished</b> And forge something that stands out.</li>
+        </ol>
+      </div>
+
+      <div class="forge-scene" aria-hidden="true">
+        <div class="forge-hammer"><i class="hammer-head"></i><i class="hammer-handle"></i></div>
+        <div class="forge-piece">
+          <div class="fp-wire">
+            <div class="fp-nav"></div>
+            <div class="fp-hero"></div>
+            <div class="fp-cards"><i></i><i></i><i></i></div>
+          </div>
+          <div class="fp-final">
+            <div class="fp-bar"><i></i><i></i><i></i><span></span></div>
+            <div class="ff-nav"><b></b><span></span><span></span><span></span><em></em></div>
+            <div class="ff-hero">
+              <div class="ff-text"><strong></strong><strong></strong><small></small><em></em></div>
+              <div class="ff-img"></div>
+            </div>
+            <div class="ff-cards"><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <div class="forge-bed"></div>
+      </div>
+    </div>
+    <p class="scroll-hint" aria-hidden="true">Scroll to forge <span>↓</span></p>
+  </div>
+</section>
+
+<div class="molten-wrap">
+  <svg class="molten" aria-hidden="true">
+    <defs>
+      <linearGradient id="moltenGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FF2E93"/><stop offset=".55" stop-color="#FF7A18"/><stop offset="1" stop-color="#FFD23F"/>
+      </linearGradient>
+    </defs>
+    <path class="molten-track" fill="none"/>
+    <path class="molten-path" fill="none" pathLength="1"/>
+    <g class="molten-nodes"></g>
+    <circle class="molten-tip" r="7"/>
+  </svg>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section" id="services" data-ignite>
+    <div class="container">
+      <p class="eyebrow">Services</p>
+      <h2 class="section-title">What I can forge for you</h2>
+      <p class="section-lede reveal">Four ways to make your business look better and work harder online.</p>
+      <div class="card-grid reveal">
+        <article class="card">
+          <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="30" rx="5"/><path d="M5 18h38M12 27h12M12 32h7"/></svg>
+          <h3>Website design &amp; build</h3>
+          <p>A custom website or landing page, designed around your business and built to load fast on every phone.</p>
+        </article>
+        <article class="card">
+          <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12h32v20H22l-9 7v-7H8z"/><path d="M17 22h.1M24 22h.1M31 22h.1"/></svg>
+          <h3>AI chatbots &amp; automation</h3>
+          <p>Smart assistants that answer customer questions, take bookings and handle repeat tasks while you sleep.</p>
+        </article>
+        <article class="card">
+          <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M38 20a14 14 0 1 0 1 9"/><path d="M39 9v11H28"/></svg>
+          <h3>Website redesign</h3>
+          <p>Is your current site old, slow or hard to use? I rebuild it into something modern that people trust.</p>
+        </article>
+        <article class="card">
+          <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="21" cy="21" r="12"/><path d="M30 30l11 11M16 22l4 4 6-8"/></svg>
+          <h3>SEO &amp; maintenance</h3>
+          <p>Help customers find you on Google, and keep your site updated, backed up and running smoothly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="section" id="work" data-ignite>
+    <div class="container">
+      <p class="eyebrow">Work</p>
+      <h2 class="section-title">Concept projects</h2>
+      <p class="section-lede reveal">REFORGE is new, so these are concept designs made to show what I can build. They are not paid client work.</p>
+      <div class="compare reveal">
+        <div class="compare-frame">
+          <div class="compare-layer compare-after" aria-hidden="true">
+            <div class="ca-nav"><b>Sunrise Bakery</b><span>Menu</span><span>Visit</span><em>Order now</em></div>
+            <div class="ca-hero">
+              <div><strong>Fresh bread, baked at sunrise.</strong><p>Order online and collect in 15 minutes.</p><em>Order now</em></div>
+              <div class="ca-img"></div>
+            </div>
+            <div class="ca-row"><i></i><i></i><i></i></div>
+          </div>
+          <div class="compare-layer compare-before" aria-hidden="true">
+            <div class="cb-banner">~ Welcome to Sunrise Bakery ~</div>
+            <div class="cb-nav"><u>Home</u> | <u>About Us</u> | <u>Our Products</u> | <u>Gallery</u> | <u>Contact</u></div>
+            <div class="cb-body">
+              <div class="cb-img">IMAGE</div>
+              <div class="cb-text"><p>We are a bakery making breads, cakes, cookies, pastries, buns and many more items for all occasions. Please telephone us during shop hours for ordering.</p><p><u>Click here</u> for price list (PDF).</p><p class="cb-count">Visitors: 004213</p></div>
+            </div>
+          </div>
+          <span class="compare-tag is-before" aria-hidden="true">Before</span>
+          <span class="compare-tag is-after" aria-hidden="true">After</span>
+          <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Compare the old website with the redesign. Lower values show more of the redesign.">
+          <div class="compare-handle" aria-hidden="true"><i></i></div>
+        </div>
+        <div class="work-meta">
+          <span class="tag">Concept</span>
+          <h3>Redesign: before and after</h3>
+          <p>Drag the handle. Left is the kind of outdated site many small businesses still have. Right is how REFORGE would rebuild it for a made-up bakery.</p>
+        </div>
+      </div>
+      <div class="work-grid reveal">
+
+        <article class="work-card">
+          <div class="mock" aria-hidden="true" style="--m-bg:#FFF4E6;--m-ink:#3A120E;--m-accent:#D7263D;--m-soft:#F6D9B8">
+            <div class="mock-bar"><i></i><i></i><i></i><span>emberandspice.example</span></div>
+            <div class="mock-body">
+              <div class="mock-nav"><b>Ember &amp; Spice</b><span></span><span></span><span></span></div>
+              <div class="mock-hero"><div><strong>Wood-fired food, booked in two taps.</strong><em>Reserve a table</em></div><div class="mock-img"></div></div>
+              <div class="mock-row"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Concept</span>
+            <h3>Ember &amp; Spice</h3>
+            <p>Restaurant website with the menu and table booking one tap away on a phone.</p>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="mock" aria-hidden="true" style="--m-bg:#F1FAF9;--m-ink:#0B3B3C;--m-accent:#0E9F9A;--m-soft:#CDEDEA">
+            <div class="mock-bar"><i></i><i></i><i></i><span>clearpathclinic.example</span></div>
+            <div class="mock-body">
+              <div class="mock-nav"><b>ClearPath Clinic</b><span></span><span></span><span></span></div>
+              <div class="mock-hero"><div><strong>See a doctor today, without the wait.</strong><em>Book an appointment</em></div><div class="mock-img"></div></div>
+              <div class="mock-row"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Concept</span>
+            <h3>ClearPath Clinic</h3>
+            <p>Clinic website with online appointment booking and an AI assistant for common patient questions.</p>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="mock" aria-hidden="true" style="--m-bg:#0F1030;--m-ink:#F2F3FF;--m-accent:#B6F24A;--m-soft:#24265C">
+            <div class="mock-bar"><i></i><i></i><i></i><span>launchly.example</span></div>
+            <div class="mock-body">
+              <div class="mock-nav"><b>Launchly</b><span></span><span></span><span></span></div>
+              <div class="mock-hero"><div><strong>Ship your product page this weekend.</strong><em>Start free</em></div><div class="mock-img"></div></div>
+              <div class="mock-row"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="work-meta">
+            <span class="tag">Concept</span>
+            <h3>Launchly</h3>
+            <p>Startup landing page built to turn visitors into sign-ups, with a clear offer above the fold.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section" id="process" data-ignite>
+    <div class="container">
+      <p class="eyebrow">Process</p>
+      <h2 class="section-title">How we work</h2>
+      <p class="section-lede reveal">Four clear steps from first message to a live website.</p>
+      <ol class="steps">
+        <li class="step" data-step="1"><span class="num">1</span><div><h3>Discover</h3><p>We talk about your business, your customers and what you need the website to do.</p></div></li>
+        <li class="step" data-step="2"><span class="num">2</span><div><h3>Design</h3><p>I design how it will look and you review it. We adjust until you are happy.</p></div></li>
+        <li class="step" data-step="3"><span class="num">3</span><div><h3>Build</h3><p>I turn the design into a fast, working website and test it on phones and computers.</p></div></li>
+        <li class="step" data-step="4"><span class="num">4</span><div><h3>Launch</h3><p>Your site goes live. I show you how to use it and stay available for support.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about" data-ignite>
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">The person behind REFORGE</h2>
+      <div class="about reveal">
+        <img class="about-photo" src="assets/about-photo.png" alt="" width="220" height="220">
+        <div class="about-text">
+          <h3 data-config="name">Hi, I'm the designer and developer behind REFORGE.</h3>
+          <p data-config="bio">I build websites and AI tools for businesses that want to look sharp and grow online. You work directly with me from the first message to launch, with no middlemen and no jargon.</p>
+          <p class="slogan"><span>Build.</span> <span>Innovate.</span> <span class="grad">Grow.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq" data-ignite>
+    <div class="container">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title">Common questions</h2>
+      <div class="faq reveal">
+        <details data-keywords="cost price pricing charge rate fee budget expensive cheap quote money">
+          <summary>How much does a website cost?</summary>
+          <p>It depends on what you need. A simple one-page site costs less than a larger site with custom features. Tell me what you have in mind and I'll give you a fixed quote before any work starts.</p>
+        </details>
+        <details data-keywords="time timeline days weeks months deadline fast quick soon duration">
+          <summary>How long does it take?</summary>
+          <p>It depends on the size of the project and how quickly content such as text and photos is ready. You get a clear timeline with your quote.</p>
+        </details>
+        <details data-keywords="change revision edit update modify alter feedback">
+          <summary>Can I ask for changes?</summary>
+          <p>Yes. You review the design before I build it, and revision rounds are included and agreed up front.</p>
+        </details>
+        <details data-keywords="domain hosting host server name live publish">
+          <summary>Do you handle the domain and hosting?</summary>
+          <p>Yes. I can set up your domain name and hosting for you, or work with what you already have.</p>
+        </details>
+        <details data-keywords="start begin provide requirements content logo photos text">
+          <summary>What do you need from me to start?</summary>
+          <p>A short chat about your business, your logo if you have one, and any text or photos you want to use. If you don't have these yet, I can help.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact" data-ignite>
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h2 class="section-title">Let's forge your website</h2>
+      <div class="contact reveal">
+        <div class="contact-info">
+          <svg class="molten-r" viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <linearGradient id="rGrad" gradientUnits="userSpaceOnUse" x1="24" y1="14" x2="84" y2="88"><stop offset="0" stop-color="#FF2E93"/><stop offset=".55" stop-color="#FF7A18"/><stop offset="1" stop-color="#FFD23F"/></linearGradient>
+              <clipPath id="rFill"><rect class="rfill-rect" x="0" y="0" width="100" height="100"/></clipPath>
+            </defs>
+            <g class="r-base" transform="translate(7 0) skewX(-8)" fill="none" stroke-width="13"><path d="M30 84 V16 H55 a20 20 0 0 1 0 40 H30"/><path d="M50 57 L74 84"/></g>
+            <g clip-path="url(#rFill)"><g transform="translate(7 0) skewX(-8)" fill="none" stroke="url(#rGrad)" stroke-width="13"><path d="M30 84 V16 H55 a20 20 0 0 1 0 40 H30"/><path d="M50 57 L74 84"/></g></g>
+          </svg>
+          <p>Tell me about your project. I usually reply within a day.</p>
+          <ul class="contact-list">
+            <li hidden><span>WhatsApp</span><a href="#contact" data-config="whatsapp"></a></li>
+            <li hidden><span>Email</span><a href="#contact" data-config="email"></a></li>
+            <li hidden><span>Instagram</span><a href="#contact" data-config="instagram"></a></li>
+          </ul>
+        </div>
+
+        <form id="enquiry" class="form" novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-contact">Email or phone</label>
+            <input id="f-contact" name="contact" type="text" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-service">What do you need?</label>
+            <select id="f-service" name="service">
+              <option>Website design &amp; build</option>
+              <option>AI chatbot or automation</option>
+              <option>Website redesign</option>
+              <option>SEO &amp; maintenance</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-message">Tell me about your project</label>
+            <textarea id="f-message" name="message" rows="4" required></textarea>
+          </div>
+          <input class="hp" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-primary" type="submit">Send enquiry</button>
+          <noscript><p class="form-status" data-state="error">This form needs JavaScript. Please contact me using the details beside it.</p></noscript>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo"><img class="logo-dark" src="assets/reforge-logo-for-dark-bg.svg" alt="REFORGE" width="130" height="25"><img class="logo-light" src="assets/reforge-logo-for-light-bg.svg" alt="REFORGE" width="130" height="25"></span>
+    <p>Ideas to impact. © <span data-year>2026</span> REFORGE.</p>
+  </div>
+</footer>
+
+<button class="chat-fab" type="button" aria-expanded="false" aria-controls="chat-panel" aria-label="Open the REFORGE assistant">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.3 18.6z"/><path d="M9 11.5h.01M12 11.5h.01M15 11.5h.01"/></svg>
+</button>
+<section class="chat-panel" id="chat-panel" role="dialog" aria-label="REFORGE assistant" hidden>
+  <header class="chat-head">
+    <div><strong>REFORGE assistant</strong><span>Automated answers, not a live person</span></div>
+    <button class="chat-close" type="button" aria-label="Close the assistant">×</button>
+  </header>
+  <a class="btn btn-primary btn-small chat-wa" href="#contact" data-config="whatsapp" data-keep-text hidden>Chat on WhatsApp</a>
+  <div class="chat-log" aria-live="polite"></div>
+  <div class="chat-chips"></div>
+  <form class="chat-form">
+    <label class="sr-only" for="chat-input">Type your question</label>
+    <input id="chat-input" type="text" autocomplete="off" placeholder="Type your question" maxlength="200">
+    <button class="btn btn-primary btn-small" type="submit">Send</button>
+  </form>
+</section>
+
+<div class="intro" aria-hidden="true">
+  <svg viewBox="0 0 100 100">
+    <defs><linearGradient id="introGrad" gradientUnits="userSpaceOnUse" x1="24" y1="14" x2="84" y2="88"><stop offset="0" stop-color="#FF2E93"/><stop offset=".55" stop-color="#FF7A18"/><stop offset="1" stop-color="#FFD23F"/></linearGradient></defs>
+    <g transform="translate(7 0) skewX(-8)" fill="none" stroke="url(#introGrad)" stroke-width="13"><path pathLength="1" d="M30 84 V16 H55 a20 20 0 0 1 0 40 H30"/><path pathLength="1" d="M50 57 L74 84"/></g>
+  </svg>
+</div>
+
+<script defer src="js/config.js"></script>
+<script defer src="js/scroll-math.js"></script>
+<script defer src="js/site-logic.js"></script>
+<script defer src="js/scroll-engine.js"></script>
+<script defer src="js/forge-scene.js"></script>
+<script defer src="js/molten-line.js"></script>
+<script defer src="js/site.js"></script>
+<script defer src="js/theme.js"></script>
+<script defer src="js/effects.js"></script>
+<script defer src="js/compare.js"></script>
+<script defer src="js/chat.js"></script>
+</body>
+</html>
